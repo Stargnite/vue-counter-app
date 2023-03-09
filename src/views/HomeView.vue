@@ -17,7 +17,10 @@ h1 {
   left: 50%;
   transform: translate(-50%, -50%);
   text-transform: capitalize;
-  font-family: Cambria, Cochin, Georgia, Times, "Times New Roman", serif;
-  color: green;
+  font-family:monospace;
+  color: whitesmoke;
+  font-size: 2.5rem;
+  white-space: nowrap;
+  transition: ;
 }
 </style>
