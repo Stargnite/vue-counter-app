@@ -1,11 +1,15 @@
 import { createStore } from "vuex";
+import { getField, updateField } from 'vuex-map-fields';
 
 const store = createStore({
   state: {
     counter: 0,
   },
 
-  // getters: {},
+  getters: {
+    getField,
+    counter: (state) => state.counter,
+  },
 
   mutations: {
     increment: (state) => {
@@ -17,14 +21,7 @@ const store = createStore({
     reset: (state) => {
       state.counter = 0;
     },
-    updateCounter: function(e, state, value) {
-      console.log(e.target.value)
-      state.counter = e.target.value
-    }
-
-    // update: (state) => {
-    //   state.counter = input.value
-    // }
+    updateField,
   },
 
   actions: {},

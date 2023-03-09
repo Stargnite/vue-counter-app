@@ -10,22 +10,17 @@
 </template>
 
 <script>
-import { mapState } from "vuex";
-
+import { mapFields } from 'vuex-map-fields';
 export default {
   name: "Counter",
   computed: {
-    counter() {
-      return this.$store.state.counter;
-    },
-    set(value) {
-      this.$store.commit("updateCounter", value);
-    },
+    // counter() {
+    //   return this.$store.getters.counter;
+    // },
+    ...mapFields({
+      counter: 'counter'
+    })
   },
-
-  ...mapState({
-    counter: (state) => state.counter,
-  }),
 
   methods: {
     increment: function () {
@@ -63,15 +58,21 @@ export default {
   padding: 0;
   margin: 0;
   color: rgb(0, 139, 74);
+  transition: all .5s linear 0s;
 }
 
 button {
   font-size: 1.2rem;
+  border: none;
+  width: auto;
+  padding: 0.5rem;
+  border-radius: 10%;
 }
 
 .decrement {
   grid-column-start: 1;
   grid-column-end: 2;
+  background-color: rgb(243, 39, 12);
 }
 .reset {
   grid-column-start: 3;
@@ -81,6 +82,7 @@ button {
 .increment {
   grid-column-start: 5;
   grid-column-end: 5;
+  background-color: rgb(0, 139, 74);
 }
 
 .counter input {

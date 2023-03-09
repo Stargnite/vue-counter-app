@@ -23,7 +23,7 @@ nav {
   display: flex;
   align-items: center;
   justify-content: space-between;
-  background-color: #eee;
+  color: #eee;
   padding: 0.2rem 2rem;
   background-color: #53d198;
 }
@@ -43,10 +43,15 @@ nav h1 {
 
 nav a {
   text-decoration: none;
-  color: #333;
+  color: #252424;
+  font-weight: 500;
+  font-family: Arial, Helvetica, sans-serif;
+  transition: all .3s linear 0s;
 }
+
 nav a:hover {
   text-decoration: underline;
+  color: white;
 }
 
 </style>

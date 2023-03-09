@@ -11,6 +11,7 @@ export default {
 
 <style scoped>
 h1 {
+  width: 100%;
   position: absolute;
   text-align: center;
   top: 50%;
@@ -18,9 +19,15 @@ h1 {
   transform: translate(-50%, -50%);
   text-transform: capitalize;
   font-family:monospace;
-  color: whitesmoke;
+  color: rgb(49, 47, 47);
   font-size: 2.5rem;
   white-space: nowrap;
-  transition: ;
+  transition: width 2s linear 1s;
+}
+
+@media screen and (max-width: 750px) {
+  h1 {
+    white-space: normal;
+  }
 }
 </style>
