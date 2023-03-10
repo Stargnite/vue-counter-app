@@ -1,6 +1,6 @@
 # Vue.js Counter App
 
-This is a simple counter app built using Vue.js, a popular JavaScript framework for building a single page user interfaces. The app allows users to increment or decrement a counter by clicking on two buttons, and displays the current count value. There is also a reset button used to return the count value back to its original state which is '0' 
+This is a simple counter app built using Vue.js, a popular JavaScript framework for building a single page user interface. The app allows users to increment or decrement a counter by clicking on two buttons, and displays the current count value. There is also a reset button used to return the count value back to its original state which is '0' 
 
 ### Getting Started
 To get started with the app, you will need to have Node.js and npm installed on your machine. Once you have installed these tools, you can follow the steps below:

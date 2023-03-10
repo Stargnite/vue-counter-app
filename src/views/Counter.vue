@@ -53,6 +53,7 @@ export default {
 
 .counter h1 {
   font-size: 5rem;
+  text-align: center;
   grid-column-start: 1;
   grid-column-end: 6;
   padding: 0;

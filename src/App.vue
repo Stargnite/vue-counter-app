@@ -12,6 +12,7 @@
 
 <style>
 body {
+  background-color: #333;
   background-image: url('./../src/assets/logo-2.svg');
   background-repeat: no-repeat;
   background-position: center top;
@@ -31,6 +32,7 @@ nav {
 nav h1 {
   font-family: "Lucida Sans", "Lucida Sans Regular", "Lucida Grande",
     "Lucida Sans Unicode", Geneva, Verdana, sans-serif;
+    text-align: center;
 }
 
 .nav-btn {
