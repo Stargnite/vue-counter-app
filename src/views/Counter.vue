@@ -10,7 +10,7 @@
 </template>
 
 <script>
-import { mapFields } from 'vuex-map-fields';
+import { mapFields } from "vuex-map-fields";
 export default {
   name: "Counter",
   computed: {
@@ -18,8 +18,8 @@ export default {
     //   return this.$store.getters.counter;
     // },
     ...mapFields({
-      counter: 'counter'
-    })
+      counter: "counter",
+    }),
   },
 
   methods: {
@@ -41,7 +41,6 @@ export default {
   display: grid;
   grid-template-columns: repeat(5, 1fr);
   grid-template-rows: repeat(3, 1fr);
-
   align-items: center;
   justify-content: center;
   position: absolute;
@@ -49,6 +48,9 @@ export default {
   left: 50%;
   transform: translate(-50%, -50%);
   text-align: center;
+  animation: fadeInAnimation ease 1.5s;
+  animation-iteration-count: 1;
+  animation-fill-mode: forwards;
 }
 
 .counter h1 {
@@ -59,7 +61,16 @@ export default {
   padding: 0;
   margin: 0;
   color: rgb(0, 139, 74);
-  transition: all .5s linear 0s;
+  transition: all 0.5s linear 0s;
+}
+
+@keyframes fadeInAnimation {
+  0% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 1;
+  }
 }
 
 button {

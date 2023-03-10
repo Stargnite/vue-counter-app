@@ -27,6 +27,19 @@ nav {
   color: #eee;
   padding: 0.2rem 2rem;
   background-color: #53d198;
+
+  animation: slider ease 1.5s;
+    animation-iteration-count: 1;
+    animation-fill-mode: backwards;
+}
+
+@keyframes slider {
+    0% {
+        transform: translateY(-100%);
+    }
+    100% {
+        transform: translateY(0%);
+    }
 }
 
 nav h1 {
