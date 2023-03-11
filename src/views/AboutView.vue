@@ -53,7 +53,7 @@
 }
 .about-right p {
   font-size: 30px;
-  padding: 1% 5%;
+  padding: 0 5%;
   font-family: "Gill Sans", "Gill Sans MT", Calibri, "Trebuchet MS", sans-serif;
 }
 .code-btn {

@@ -17,9 +17,9 @@
 let isActive = false;
 
 const toggleNav = () => {
-  const nav = document.querySelector(".nav-btns");
-  const toggle = document.querySelector(".nav-icon");
   console.log('clicked')
+  const nav = document.getElementsByClassName("nav-btns");
+  const toggle = document.getElementsByClassName("nav-icon");
 
   if (!isActive) {
     nav.classList.add("active");
@@ -99,7 +99,7 @@ nav a:hover, nav a:focus {
 }
 
 .active {
-  display: flex;
+  display: block;
 }
 
 @media screen and (max-width: 560px) {
