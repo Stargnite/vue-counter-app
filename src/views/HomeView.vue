@@ -1,5 +1,10 @@
 <template>
-  <h1>Counter app made with vueJs</h1>
+  <div class="home-page">
+    <h1>Counter app made with vueJs</h1>
+    <router-link to="/counter">
+      <button>Counter App</button>
+    </router-link>
+  </div>
 </template>
 
 <script>
@@ -10,28 +15,40 @@ export default {
 </script>
 
 <style scoped>
-h1 {
-  width: 100%;
+.home-page {
   position: absolute;
   text-align: center;
   top: 50%;
   left: 50%;
   transform: translate(-50%, -50%);
   text-transform: capitalize;
-  font-family:monospace;
+}
+
+h1 {
+  width: 80vw;
+  font-family: monospace;
   color: white;
   font-size: 2.5rem;
   white-space: nowrap;
-  transition: width 2s linear 1s;
 
   animation: fadeInAnimation ease 2s;
   animation-iteration-count: 1;
   animation-fill-mode: forwards;
 }
 
+button {
+  background-color: green;
+  color: antiquewhite;
+
+  animation: slider ease 1.5s;
+  animation-iteration-count: 1;
+  animation-fill-mode: backwards;
+}
+
 @media screen and (max-width: 750px) {
   h1 {
     white-space: normal;
+    font-size: 25px;
   }
 }
 </style>

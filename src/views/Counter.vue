@@ -1,11 +1,17 @@
 <template>
-  <div class="counter">
-    <h1>{{ counter }}</h1>
-    <button @click="decrement" class="decrement">-</button>
-    <button @click="reset" class="reset">Reset</button>
-    <button @click="increment" class="increment">+</button>
-    <input type="number" v-model="counter" @input="updateCounter" />
-    <!-- <button @click=''>update</button> -->
+  <div class="counter-gen">
+    <div class="counter">
+      <h1>{{ counter }}</h1>
+      <button @click="decrement" class="decrement">-</button>
+      <button @click="reset" class="reset">
+        <font-awesome-icon icon="fa-solid fa-arrow-rotate-left" />
+      </button>
+      <button @click="increment" class="increment">+</button>
+      <input type="number" v-model="counter" @input="updateCounter" />
+    </div>
+    <router-link to="/">
+      <button>Back Home</button>
+    </router-link>
   </div>
 </template>
 
@@ -37,17 +43,21 @@ export default {
 </script>
 
 <style>
+.counter-gen {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  text-align: center;
+}
+
 .counter {
   display: grid;
   grid-template-columns: repeat(5, 1fr);
   grid-template-rows: repeat(3, 1fr);
   align-items: center;
   justify-content: center;
-  position: absolute;
-  top: 50%;
-  left: 50%;
-  transform: translate(-50%, -50%);
-  text-align: center;
+
   animation: fadeInAnimation ease 1.5s;
   animation-iteration-count: 1;
   animation-fill-mode: forwards;
@@ -61,7 +71,7 @@ export default {
   padding: 0;
   margin: 0;
   color: rgb(0, 139, 74);
-  transition: all 0.5s linear 0s;
+  font-family: Cambria, Cochin, Georgia, Times, "Times New Roman", serif;
 }
 
 @keyframes fadeInAnimation {
@@ -78,6 +88,7 @@ button {
   border: none;
   width: auto;
   padding: 0.5rem;
+  margin: 1rem 0;
   border-radius: 10%;
 }
 
@@ -100,5 +111,8 @@ button {
 .counter input {
   grid-column-start: 1;
   grid-column-end: 6;
+  background-color: #fff;
+  border: none;
+  height: 2rem;
 }
 </style>
