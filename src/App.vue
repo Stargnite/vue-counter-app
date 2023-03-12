@@ -1,23 +1,8 @@
-<template>
-  <nav>
-    <h1>Counter App</h1>
-    <div class="nav-btns">
-      <router-link to="/">Home</router-link>
-      <router-link to="/about">About</router-link>
-      <router-link to="/counter">Counter</router-link>
-    </div>
-    <div class="nav-icon" @click="toggleNav">
-      <font-awesome-icon icon="fa-solid fa-bars" @click="toggleNav" />
-    </div>
-  </nav>
-  <router-view />
-</template>
-
 <script>
 let isActive = false;
 
 const toggleNav = () => {
-  console.log('clicked')
+  console.log("clicked meeeeeeeee");
   const nav = document.getElementsByClassName("nav-btns");
   const toggle = document.getElementsByClassName("nav-icon");
 
@@ -30,9 +15,34 @@ const toggleNav = () => {
     toggle.classList.remove("active");
     isActive = false;
   }
+};
 
+const toggleNavv = () => {
+  alert ('This is a decoy, nothing to see here')
+}
+
+export default {
+  methods: {
+    toggleNav,
+    toggleNavv
+  },
 };
 </script>
+
+<template>
+  <nav>
+    <h1>Counter App</h1>
+    <div class="nav-btns">
+      <router-link to="/" @click="toggleNav">Home</router-link>
+      <router-link to="/about" @click="toggleNav">About</router-link>
+      <router-link to="/counter" @click="toggleNav">Counter</router-link>
+    </div>
+    <div class="nav-icon" @click="toggleNavv">
+      <font-awesome-icon icon="fa-solid fa-bars" />
+    </div>
+  </nav>
+  <router-view />
+</template>
 
 <style>
 body {
@@ -72,12 +82,17 @@ nav h1 {
   text-align: center;
 }
 
-.nav-btns {
+.nav-btns,
+.nav-btns-sm {
   display: flex;
   align-items: center;
   justify-content: space-around;
   width: 20rem;
   font-size: 1.5rem;
+}
+
+.nav-btns-sm {
+  display: none;
 }
 
 .nav-icon {
@@ -93,7 +108,8 @@ nav a {
   transition: all 0.3s linear 0s;
 }
 
-nav a:hover, nav a:focus {
+nav a:hover,
+nav a:focus {
   text-decoration: underline;
   color: white;
 }
@@ -105,11 +121,12 @@ nav a:hover, nav a:focus {
 @media screen and (max-width: 560px) {
   .nav-btns {
     display: none;
+    flex-direction: column;
   }
 
   .active {
-  display: flex;
-}
+    display: block;
+  }
 
   .nav-icon {
     display: block;
