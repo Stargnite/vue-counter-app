@@ -1,30 +1,11 @@
 <script>
-let isActive = false;
-
 const toggleNav = () => {
-  console.log("clicked meeeeeeeee");
-  const nav = document.getElementsByClassName("nav-btns");
-  const toggle = document.getElementsByClassName("nav-icon");
-
-  if (!isActive) {
-    nav.classList.add("active");
-    toggle.classList.add("active");
-    isActive = true;
-  } else {
-    nav.classList.remove("active");
-    toggle.classList.remove("active");
-    isActive = false;
-  }
-};
-
-const toggleNavv = () => {
   alert ('This is a decoy, nothing to see here')
 }
 
 export default {
   methods: {
-    toggleNav,
-    toggleNavv
+    toggleNav
   },
 };
 </script>
@@ -33,11 +14,11 @@ export default {
   <nav>
     <h1>Counter App</h1>
     <div class="nav-btns">
-      <router-link to="/" @click="toggleNav">Home</router-link>
-      <router-link to="/about" @click="toggleNav">About</router-link>
-      <router-link to="/counter" @click="toggleNav">Counter</router-link>
+      <router-link to="/">Home</router-link>
+      <router-link to="/about">About</router-link>
+      <router-link to="/counter" >Counter</router-link>
     </div>
-    <div class="nav-icon" @click="toggleNavv">
+    <div class="nav-icon" @click="toggleNav">
       <font-awesome-icon icon="fa-solid fa-bars" />
     </div>
   </nav>
