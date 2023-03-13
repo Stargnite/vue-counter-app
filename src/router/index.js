@@ -21,7 +21,7 @@ const routes = [
     component: Counter
   },
   {
-    path: '/:NotFound(.*)*',
+    path: '/:catchAll(.*)',
     name: 'error',
     component: Error
   },
