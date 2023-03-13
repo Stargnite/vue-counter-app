@@ -7,7 +7,7 @@
         <font-awesome-icon icon="fa-solid fa-arrow-rotate-left" />
       </button>
       <button @click="increment" class="increment">+</button>
-      <input type="number" v-model="counter" @input="updateCounter" />
+      <input type="number" v-model="counter" />
     </div>
     <router-link to="/">
       <button>Back Home</button>
@@ -17,16 +17,29 @@
 
 <script>
 import { mapFields } from "vuex-map-fields";
+// import { CounterFunctions } from "./../composables/Composable.js";
+
+// const { increment, decrement, reset } = CounterFunctions();
+
 export default {
   name: "Counter",
   computed: {
-    // counter() {
-    //   return this.$store.getters.counter;
-    // },
     ...mapFields({
       counter: "counter",
     }),
   },
+
+  // methods: {
+  //   increment: function () {
+  //     increment;
+  //   },
+  //   decrement: function () {
+  //     decrement;
+  //   },
+  //   reset: function () {
+  //     reset;
+  //   },
+  // },
 
   methods: {
     increment: function () {
