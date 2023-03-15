@@ -31,18 +31,29 @@
 }
 
 h2 {
-  color: rgb(233, 236, 235);
   font-family:'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
   padding: 3%;
+}
+
+button {
+  background-color: #ffa100;
+  color: white;
+  border: none;
+  border-radius: 5px;
+  padding: 1%;
+  font-size: 1.2rem;
+  font-weight: bold;
+  cursor: pointer;
+  transition: all 0.3s ease;
 }
     </style>
   </head>
   <body>
     <div class="error-page">
       <h2>Sorry, it seems the page you're looking for does not exist</h2>
-      <router-link to="/">
+      <a to="https://vue-counter-app-d9ce4.web.app">
         <button>Return home</button>
-      </router-link>
+      </a>
     </div>
   </body>
 </html>
